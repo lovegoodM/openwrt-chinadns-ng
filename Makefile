@@ -50,6 +50,7 @@ define Package/chinadns-ng/install
 	$(INSTALL_CONF) $(PKG_BUILD_DIR)/gfwlist.txt $(1)/etc/chinadns-ng
 	$(INSTALL_CONF) $(PKG_BUILD_DIR)/chnroute.ipset $(1)/etc/chinadns-ng
 	$(INSTALL_CONF) $(PKG_BUILD_DIR)/chnroute6.ipset $(1)/etc/chinadns-ng
+	$(CP) ./files/* $(1)/etc/chinadns-ng
 endef
 
 $(eval $(call BuildPackage,chinadns-ng))
