@@ -1,0 +1,8 @@
+#!/bin/sh
+uci -q batch <<-EOF >/dev/null
+	delete ucitrack.@chinands-ng[-1]
+	add ucitrack chinands-ng
+	set ucitrack.@chinands-ng[-1].init=chinands-ng
+	commit ucitrack
+EOF
+exit 0

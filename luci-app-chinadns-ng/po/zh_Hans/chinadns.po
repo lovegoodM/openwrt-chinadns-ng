@@ -1,0 +1,74 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "ChinaDNS-NG"
+msgstr "ChinaDNS-NG"
+
+msgid "Collecting data..."
+msgstr "收集数据。。。"
+
+msgid "NOT RUNNING"
+msgstr "未运行"
+
+msgid "RUNNING"
+msgstr "运行中"
+
+msgid "General Setting"
+msgstr "基本设置"
+
+msgid "Enable"
+msgstr "启用"
+
+msgid "Local Addr"
+msgstr "本地地址"
+
+msgid "The listening address can be set to IPV4 or IPV6"
+msgstr "监听地址可设置IPV4或IPV6"
+
+msgid "Local Port"
+msgstr "本地端口"
+
+msgid "Redirect"
+msgstr "重定向"
+
+msgid "ChinaDNS redirect mode"
+msgstr "ChinaDNS 重定向模式选择"
+
+msgid "none"
+msgstr "无"
+
+msgid "Run as dnsmasq upstream server"
+msgstr "作为dnsmasq的上游服务器"
+
+msgid "Redirect 53 port to ChinaDNS"
+msgstr "重定向53端口到ChinaDNS"
+
+msgid "Startup parameters"
+msgstr "启动参数"
+
+msgid "S_Enable"
+msgstr "启动第二个chinadns"
+
+msgid "update chnlist"
+msgstr "更新chnlist"
+
+msgid "The file is in /etc/chinadns-ng/chnlist.txt"
+msgstr "文件在/etc/chinadns-ng/chnlist.txt"
+
+msgid "update gfwlist"
+msgstr "更新gfwlist"
+
+msgid "The file is in /etc/chinadns-ng/chnlist.txt"
+msgstr "文件在/etc/chinadns-ng/gfwlist.txt"
+
+msgid "update chnroute"
+msgstr "更新chnroute"
+
+msgid "The file is in /etc/chinadns-ng/chnroute.ipset"
+msgstr "文件在/etc/chinadns-ng/chnroute.ipset"
+
+msgid "update chnroute6"
+msgstr "更新chnroute6"
+
+msgid "The file is in /etc/chinadns-ng/chnroute6.ipset"
+msgstr "文件在/etc/chinadns-ng/chnroute6.ipset"
