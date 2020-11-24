@@ -1,4 +1,4 @@
-msgid ""
+﻿msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "ChinaDNS-NG"
@@ -43,8 +43,8 @@ msgstr "作为dnsmasq的上游服务器"
 msgid "Redirect 53 port to ChinaDNS"
 msgstr "重定向53端口到ChinaDNS"
 
-msgid "Startup parameters"
-msgstr "启动参数"
+msgid "Extra parameters"
+msgstr "额外参数(除地址和端口以外)"
 
 msgid "S_Enable"
 msgstr "启动第二个chinadns"

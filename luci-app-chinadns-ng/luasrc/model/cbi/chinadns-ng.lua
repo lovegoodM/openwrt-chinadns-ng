@@ -30,7 +30,7 @@ o.placeholder = "none"
 o.default     = "none"
 o.rempty      = false
 
-o = s:option(Value, "execpara", translate("Startup parameters"))
+o = s:option(Value, "execpara", translate("Extra parameters"))
 -- o.optional    = true
 o.datatype    = "string"
 o.rmempty     = true
@@ -62,7 +62,7 @@ o.default     = "none"
 o.rmempty     = true
 o:depends("s_enable", 1)
 
-o = s:option(Value, "s_execpara", translate("Startup parameters"))
+o = s:option(Value, "s_execpara", translate("Extra parameters"))
 -- o.optional    = true
 o.datatype    = "string"
 o.rmempty     = true
