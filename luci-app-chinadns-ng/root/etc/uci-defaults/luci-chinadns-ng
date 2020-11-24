@@ -1,8 +1,10 @@
 #!/bin/sh
 uci -q batch <<-EOF >/dev/null
-	delete ucitrack.@chinands-ng[-1]
-	add ucitrack chinands-ng
-	set ucitrack.@chinands-ng[-1].init=chinands-ng
+	delete ucitrack.@chinadns-ng[-1]
+	add ucitrack chinadns-ng
+	set ucitrack.@chinadns-ng[-1].init=chinadns-ng
 	commit ucitrack
 EOF
+
+rm -rf /tmp/luci-indexcache* /tmp/luci-modulecache/
 exit 0

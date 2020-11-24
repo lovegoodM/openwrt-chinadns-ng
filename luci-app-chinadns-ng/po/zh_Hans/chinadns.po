@@ -49,26 +49,9 @@ msgstr "启动参数"
 msgid "S_Enable"
 msgstr "启动第二个chinadns"
 
-msgid "update chnlist"
-msgstr "更新chnlist"
+msgid "update"
+msgstr "更新"
 
-msgid "The file is in /etc/chinadns-ng/chnlist.txt"
-msgstr "文件在/etc/chinadns-ng/chnlist.txt"
+msgid "The file is in"
+msgstr "文件在"
 
-msgid "update gfwlist"
-msgstr "更新gfwlist"
-
-msgid "The file is in /etc/chinadns-ng/chnlist.txt"
-msgstr "文件在/etc/chinadns-ng/gfwlist.txt"
-
-msgid "update chnroute"
-msgstr "更新chnroute"
-
-msgid "The file is in /etc/chinadns-ng/chnroute.ipset"
-msgstr "文件在/etc/chinadns-ng/chnroute.ipset"
-
-msgid "update chnroute6"
-msgstr "更新chnroute6"
-
-msgid "The file is in /etc/chinadns-ng/chnroute6.ipset"
-msgstr "文件在/etc/chinadns-ng/chnroute6.ipset"

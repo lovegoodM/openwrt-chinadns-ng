@@ -69,25 +69,25 @@ o.rmempty     = true
 o:depends("s_enable", 1)
 
 
-o = s:option(Button, "updata_chnlist", translate("update chnlist"), translate("The file is in /etc/chinadns-ng/chnlist.txt"))
+o = s:option(Button, "updata_chnlist", translate("update").." chnlist", translate("The file is in").." /etc/chinadns-ng/chnlist.txt")
 o.inputstyle = "save"
 function o.write(e, e)
     os.execute("[ -x '/etc/chinadns-ng/update-chnlist.sh' ] && /etc/chinadns-ng/update-chnlist.sh /etc/chinadns-ng/chnlist.txt >/dev/null 2>&1 &")
 end
 
-o = s:option(Button, "updata_gfwlist", translate("update gfwlist"), translate("The file is in /etc/chinadns-ng/gfwlist.txt"))
+o = s:option(Button, "updata_gfwlist", translate("update").." gfwlist", translate("The file is in").." /etc/chinadns-ng/gfwlist.txt")
 o.inputstyle = "save"
 function o.write(e, e)
     os.execute("[ -x '/etc/chinadns-ng/gfwlist2dnsmasq.sh' ] && /etc/chinadns-ng/gfwlist2dnsmasq.sh -l -o /etc/chinadns-ng/gfwlist.txt >/dev/null 2>&1 &")
 end
 
-o = s:option(Button, "updata_chnroute", translate("update chnroute"), translate("The file is in /etc/chinadns-ng/chnroute.ipset"))
+o = s:option(Button, "updata_chnroute", translate("update").." chnroute", translate("The file is in").." /etc/chinadns-ng/chnroute.ipset")
 o.inputstyle = "save"
 function o.write(e, e)
     os.execute("[ -x '/etc/chinadns-ng/update-chnroute.sh' ] && /etc/chinadns-ng/update-chnroute.sh /etc/chinadns-ng/chnroute.ipset >/dev/null 2>&1 &")
 end
 
-o = s:option(Button, "updata_chnroute6", translate("update chnroute6"), translate("The file is in /etc/chinadns-ng/chnroute6.ipset"))
+o = s:option(Button, "updata_chnroute6", translate("update").." chnroute6", translate("The file is in").." /etc/chinadns-ng/chnroute6.ipset")
 o.inputstyle = "save"
 function o.write(e, e)
     os.execute("[ -x '/etc/chinadns-ng/update-chnroute6.sh' ] && /etc/chinadns-ng/update-chnroute6.sh /etc/chinadns-ng/chnroute6.ipset >/dev/null 2>&1 &")

@@ -17,8 +17,8 @@ ip_same()
 	
 	local temp="$(ifconfig | grep "inet addr" | grep -v ":127" | grep "Bcast" | awk '{print $2}' | awk -F : '{print $2}' | tr '\n' ' ')"
 	local sample="0.0.0.0 127.0.0.1 $temp"
-	[ "$IP" != "$IP2" ] && [ -z "$(echo "$sample" | grep "$IP")" -a -z "$(echo "$sample" | grep "$IP2")" ] && echo 1
-	echo 0
+	[ "$IP" != "$IP2" ] && [ -z "$(echo "$sample" | grep "$IP")" -o -z "$(echo "$sample" | grep "$IP2")" ] && echo 0
+	echo 1
 }
 
 valid_ipv6()
