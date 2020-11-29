@@ -1,0 +1,29 @@
+<%+cbi/valueheader%>
+	<% if self:cfgvalue(section) ~= false then %>
+		<input class="cbi-input-text" type="text"<%= attr("name", cbid) .. attr("id", cbid) .. attr("placeholder", self.placeholder or "") .. attr("value", self:cfgvalue(section) or self.default or "")%> />&nbsp;
+		<input class="cbi-button cbi-button-<%=self.inputstyle or "button" %>" id="update.button.<%=cbid%>" style="display: <%= self.display %>" type="button"<%= attr("value", self.inputtitle or self.title)%> />
+		
+		<script>
+		var iwxhr = new XHR();
+		var update_button_id = 'update.button.<%=cbid%>';
+		var update_button = document.getElementById(update_button_id);
+		update_button.onclick = function(){
+			iwxhr.get('<%=url([[admin]], [[services]], [[chinadns-ng]], [[update]])%>', {
+				path: document.getElementById('<%=cbid%>').value,
+				cfg: '<%=cbid%>'
+			}, function(res) {
+				try {
+					res = eval('(' + res.responseText + ')');
+				} catch (e) {
+					res = null;
+				}
+				if (res) {
+					alert(res.info);
+				}
+			}, 180);
+		};
+		</script>
+	<% else %>
+		-
+	<% end %>
+<%+cbi/valuefooter%>

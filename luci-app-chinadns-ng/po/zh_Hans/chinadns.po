@@ -1,4 +1,4 @@
-﻿msgid ""
+msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "ChinaDNS-NG"
@@ -44,7 +44,10 @@ msgid "Redirect 53 port to ChinaDNS"
 msgstr "重定向53端口到ChinaDNS"
 
 msgid "Extra parameters"
-msgstr "额外参数(除地址和端口以外)"
+msgstr "额外参数"
+
+msgid "Parameters other than address and port"
+msgstr "除了地址和端口以外的参数"
 
 msgid "S_Enable"
 msgstr "启动第二个chinadns"
@@ -52,6 +55,20 @@ msgstr "启动第二个chinadns"
 msgid "update"
 msgstr "更新"
 
-msgid "The file is in"
-msgstr "文件在"
+msgid "PATH"
+msgstr "路径"
 
+msgid "The update time may be 1-2 minutes, and it may fail."
+msgstr "更新时间可能有1-2分钟，可能会失败。"
+
+msgid "This is a directory"
+msgstr "这是一个目录"
+
+msgid "Update completed"
+msgstr "更新成功"
+
+msgid "Update failed"
+msgstr "更新失败"
+
+msgid "error: "
+msgstr "错误"

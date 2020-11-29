@@ -169,7 +169,7 @@ load_service()
 	config_get s_port "$section" "s_port" "63535"
 	if [ "$s_port" = "$port" ]; then
 		if [ "`ip_same $s_addr $addr`" = "1" ]; then
-			[ "s_port" -ge "65535" ] && s_port=`expr $s_port - 1` || s_port=`expr $s_port + 1`
+			[ "s_port" -ge "65535" ] && s_port=65534 || s_port=`expr $s_port + 1`
 			uci set $NAME.@chinadns[0].s_port=$s_port
 		fi
 	fi
