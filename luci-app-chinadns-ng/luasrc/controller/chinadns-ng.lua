@@ -28,6 +28,9 @@ function act_update()
 	if not isempty(cfg) and not isempty(path) then
 		cfgre = (string.gsub(cfg, "^[%a%d]+%.", "uci set "))
 		cfgre = command(cfgre .. "=" .. path .. " && uci commit")
+	else
+		write_json(0, luci.i18n.translate("Update failed"))
+		return
 	end
 
 	if dir_exists(path) then
@@ -76,7 +79,7 @@ function write_json(mode, e)
 		result.info = e
 	else
 		result.code = 0
-		result.info = luci.i18n.translate("error: ") .. e
+		result.info = luci.i18n.translate("error") .. ": " .. e
 	end
 	luci.http.prepare_content("application/json")
 	luci.http.write_json(result)

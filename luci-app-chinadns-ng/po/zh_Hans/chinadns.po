@@ -70,5 +70,6 @@ msgstr "更新成功"
 msgid "Update failed"
 msgstr "更新失败"
 
-msgid "error: "
+msgid "error"
 msgstr "错误"
+
