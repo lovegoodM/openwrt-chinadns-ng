@@ -58,6 +58,18 @@ msgstr "更新"
 msgid "PATH"
 msgstr "路径"
 
+msgid "PATH-chn"
+msgstr "CHN 路径"
+
+msgid "PATH-gfw"
+msgstr "GFW 路径"
+
+msgid "PATH-route"
+msgstr "ROUTE 路径"
+
+msgid "PATH-route6"
+msgstr "ROUTE6 路径"
+
 msgid "The update time may be 1-2 minutes, and it may fail."
 msgstr "更新时间可能有1-2分钟，可能会失败。"
 

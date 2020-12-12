@@ -69,28 +69,28 @@ o.rmempty     = true
 o:depends("s_enable", 1)
 
 
-o = s:option(Button, "update_chnlist", translate("PATH"), translate("The update time may be 1-2 minutes, and it may fail."))
+o = s:option(Button, "update_chnlist", translate("PATH-chn"), translate("The update time may be 1-2 minutes, and it may fail."))
 o.template		= "cbi/chinadns_button"
 o.inputstyle	= "save"
 o.placeholder	= "/etc/chinadns-ng/chnlist.txt"
 o.default		= "/etc/chinadns-ng/chnlist.txt"
 o.inputtitle	= translate("update")
 
-o = s:option(Button, "gfwlist2dnsmasq", translate("PATH"), translate("The update time may be 1-2 minutes, and it may fail."))
+o = s:option(Button, "gfwlist2dnsmasq", translate("PATH-gfw"), translate("The update time may be 1-2 minutes, and it may fail."))
 o.template		= "cbi/chinadns_button"
 o.inputstyle	= "save"
 o.placeholder	= "/etc/chinadns-ng/gfwlist.txt"
 o.default		= "/etc/chinadns-ng/gfwlist.txt"
 o.inputtitle	= translate("update")
 
-o = s:option(Button, "update_chnroute", translate("PATH"), translate("The update time may be 1-2 minutes, and it may fail."))
+o = s:option(Button, "update_chnroute", translate("PATH-route"), translate("The update time may be 1-2 minutes, and it may fail."))
 o.template		= "cbi/chinadns_button"
 o.inputstyle	= "save"
 o.placeholder	= "/etc/chinadns-ng/chnroute.ipset"
 o.default		= "/etc/chinadns-ng/chnroute.ipset"
 o.inputtitle	= translate("update")
 
-o = s:option(Button, "update_chnroute6", translate("PATH"), translate("The update time may be 1-2 minutes, and it may fail."))
+o = s:option(Button, "update_chnroute6", translate("PATH-route6"), translate("The update time may be 1-2 minutes, and it may fail."))
 o.template		= "cbi/chinadns_button"
 o.inputstyle	= "save"
 o.placeholder	= "/etc/chinadns-ng/chnroute6.ipset"
