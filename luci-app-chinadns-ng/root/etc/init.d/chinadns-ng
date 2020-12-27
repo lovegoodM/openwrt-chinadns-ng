@@ -92,8 +92,10 @@ set_iptable()
 	if [ "$ipv6_server" != "1" ]; then
 		if [ "$tcp_server" = "1" ]; then
 			iptables -t nat -A PREROUTING -p tcp -d "$IP" --dport 53 -j REDIRECT --to-ports "$SMARTDNS_PORT" >/dev/null 2>&1
+			iptables -t nat -A OUTPUT -p tcp -d "127.0.0.1" --dport 53 -j REDIRECT --to-ports "$SMARTDNS_PORT" >/dev/null 2>&1
 		fi
 		iptables -t nat -A PREROUTING -p udp -d "$IP" --dport 53 -j REDIRECT --to-ports "$SMARTDNS_PORT" >/dev/null 2>&1
+		iptables -t nat -A OUTPUT -p udp -d "127.0.0.1" --dport 53 -j REDIRECT --to-ports "$SMARTDNS_PORT" >/dev/null 2>&1
 	else
 		if [ "$tcp_server" = "1" ]; then
 			ip6tables -t nat -A PREROUTING -p tcp -d "$IP" --dport 53 -j REDIRECT --to-ports "$SMARTDNS_PORT" >/dev/null 2>&1
@@ -112,8 +114,10 @@ clear_iptable()
 	if [ "$ipv6_server" != "1" ]; then
 		if [ "$tcp_server" = "1" ]; then
 			iptables -t nat -D PREROUTING -p tcp -d "$IP" --dport 53 -j REDIRECT --to-ports "$OLD_PORT" >/dev/null 2>&1
+			iptables -t nat -D OUTPUT -p tcp -d "127.0.0.1" --dport 53 -j REDIRECT --to-ports "$OLD_PORT" >/dev/null 2>&1
 		fi
 		iptables -t nat -D PREROUTING -p udp -d "$IP" --dport 53 -j REDIRECT --to-ports "$OLD_PORT" >/dev/null 2>&1
+		iptables -t nat -D OUTPUT -p udp -d "127.0.0.1" --dport 53 -j REDIRECT --to-ports "$OLD_PORT" >/dev/null 2>&1
 	else
 		if [ "$tcp_server" = "1" ]; then
 			ip6tables -t nat -D PREROUTING -p tcp -d "$IP" --dport 53 -j REDIRECT --to-ports "$OLD_PORT" >/dev/null 2>&1
